@@ -5,7 +5,10 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ paddingTop: Platform.OS === "android" && 30 }}>
-        <Text>Hello! Open up App.js to start working on your app!</Text>
+        <Text>
+          Hello there, I'm writting! Open up App.js to swtart working on your
+          app!
+        </Text>
         <StatusBar style="auto" />
       </View>
     </SafeAreaView>
@@ -15,5 +18,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
