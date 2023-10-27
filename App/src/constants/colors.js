@@ -1,4 +1,6 @@
 export default {
+  white: "#fff",
+  line: "#E2E2E2",
   text: "#343434",
-  line: "#d2d2d2",
+  blue: "#4F6D7A",
 };
