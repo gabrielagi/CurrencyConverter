@@ -1,17 +1,15 @@
 import React from "react";
-import { SafeAreaView, ScrollView, StyleSheet, Linking } from "react-native";
+import {
+  SafeAreaView,
+  ScrollView,
+  Linking,
+  Alert,
+  StatusBar,
+} from "react-native";
 import { Entypo } from "@expo/vector-icons";
-import { globalStyles } from "../../globalAndroidStyles.js";
 
 import colors from "../constants/colors";
 import { RowItem, RowSeparator } from "../components/RowItem";
-
-const styles = StyleSheet.create({
-  container: {
-    // backgroundColor: "#A0E548",
-    flex: 1,
-  },
-});
 
 const openLink = (url) =>
   Linking.openURL(url).catch(() =>
@@ -20,7 +18,9 @@ const openLink = (url) =>
 
 export default () => {
   return (
-    <SafeAreaView style={[globalStyles.androidMargin, styles.container]}>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
+
       <ScrollView>
         <RowItem
           title="Themes"

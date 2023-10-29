@@ -1,6 +1,4 @@
 import React from "react";
-import Home from "./src/screens/Home";
+import Navigation from "./src/congif/Navigation";
 
-export default function App() {
-  return <Home />;
-}
+export default () => <Navigation />;
