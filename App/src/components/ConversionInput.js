@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.offWhite,
   },
   button: {
-    padding: 15,
+    padding: 10,
     borderRightColor: colors.border,
     borderRightWidth: 1,
     backgroundColor: colors.white,
@@ -29,14 +29,14 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 5,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 16,
     color: colors.blue,
     fontWeight: "bold",
   },
   input: {
     flex: 1,
     padding: 10,
-    fontSize: 16,
+    fontSize: 15,
     color: colors.textLight,
   },
 });
