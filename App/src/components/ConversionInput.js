@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  View,
-  TouchableOpacity,
-  Text,
-  TextInput,
-  StyleSheet,
-} from "react-native";
+import { View, Pressable, Text, TextInput, StyleSheet } from "react-native";
 
 import colors from "../constants/colors";
 
@@ -44,14 +38,14 @@ const styles = StyleSheet.create({
 export const ConversionInput = ({ text, onButtonPress, ...props }) => {
   const containerStyles = [styles.container];
 
-  if (props.editable === false) {
+  if (props.readOnly === false) {
     containerStyles.push(styles.containerDisabled);
   }
   return (
     <View style={containerStyles}>
-      <TouchableOpacity style={styles.button} onPress={onButtonPress}>
+      <Pressable style={styles.button} onPress={onButtonPress}>
         <Text style={styles.buttonText}>{text}</Text>
-      </TouchableOpacity>
+      </Pressable>
       <TextInput style={styles.input} {...props} />
     </View>
   );

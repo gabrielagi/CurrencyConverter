@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Image, StyleSheet, Text } from "react-native";
+import { Pressable, Image, StyleSheet, Text } from "react-native";
 
 import colors from "../constants/colors";
 
@@ -23,13 +23,13 @@ const styles = StyleSheet.create({
 
 export const Button = ({ onPress, text }) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.button}>
+    <Pressable onPress={onPress} style={styles.button}>
       <Image
         source={require("../assets/reverse.png")}
         style={styles.buttonIcon}
         resizeMode="contain"
       />
       <Text style={styles.buttonText}>{text}</Text>
-    </TouchableOpacity>
+    </Pressable>
   );
 };

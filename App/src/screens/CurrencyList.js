@@ -27,17 +27,17 @@ const styles = StyleSheet.create({
 });
 
 export default ({ navigation, route = {} }) => {
-  const insets = useSafeAreaInsets(); // Utiliza useSafeAreaInsets para obtener los valores del área segura
+  const insets = useSafeAreaInsets();
 
   const params = route.params || {};
-  const { activeCurrency } = params;
+  const { activeCurrency, onChange = () => {} } = params;
 
   return (
     <SafeAreaView
-      style={StyleSheet.compose(
+      style={[
         { flex: 1, backgroundColor: colors.white },
-        StyleSheet.compose(globalStyles.androidMargin, { flex: 1 })
-      )}
+        globalStyles.androidMargin,
+      ]}
     >
       <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
       <FlatList
@@ -49,6 +49,7 @@ export default ({ navigation, route = {} }) => {
             <RowItem
               title={item}
               onPress={() => {
+                onChange(item);
                 navigation.pop();
               }}
               rightIcon={

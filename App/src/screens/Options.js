@@ -21,9 +21,7 @@ const openLink = (url) =>
 
 export default () => {
   return (
-    <SafeAreaView
-      style={StyleSheet.compose(globalStyles.androidMargin, { flex: 1 })}
-    >
+    <SafeAreaView style={[globalStyles.androidMargin, { flex: 1 }]}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
 
       <ScrollView>

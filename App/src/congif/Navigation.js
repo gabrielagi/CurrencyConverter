@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { Pressable } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Entypo } from "@expo/vector-icons";
@@ -36,12 +36,12 @@ const ModalStackScreen = () => (
         title: route.params && route.params.title,
         headerLeft: null,
         headerRight: () => (
-          <TouchableOpacity
+          <Pressable
             onPress={() => navigation.pop()}
             style={{ paddingHorizontal: 10 }}
           >
             <Entypo name="cross" size={30} color={colors.blue} />
-          </TouchableOpacity>
+          </Pressable>
         ),
       })}
     />

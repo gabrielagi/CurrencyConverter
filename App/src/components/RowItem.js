@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, Pressable, Text, View } from "react-native";
 
 import colors from "../constants/colors";
 
@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
 });
 
 export const RowItem = ({ title, onPress, rightIcon }) => (
-  <TouchableOpacity onPress={onPress} style={styles.row}>
+  <Pressable onPress={onPress} style={styles.row}>
     <Text style={styles.title}>{title}</Text>
     {rightIcon}
-  </TouchableOpacity>
+  </Pressable>
 );
 
 export const RowSeparator = () => <View style={styles.separator} />;
