@@ -4,12 +4,15 @@ import {
   ScrollView,
   Linking,
   Alert,
+  StyleSheet,
   StatusBar,
 } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
 import colors from "../constants/colors";
 import { RowItem, RowSeparator } from "../components/RowItem";
+
+import { globalStyles } from "../../globalAndroidStyles";
 
 const openLink = (url) =>
   Linking.openURL(url).catch(() =>
@@ -18,7 +21,9 @@ const openLink = (url) =>
 
 export default () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView
+      style={StyleSheet.compose(globalStyles.androidMargin, { flex: 1 })}
+    >
       <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
 
       <ScrollView>
