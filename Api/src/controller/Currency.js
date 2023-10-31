@@ -24,7 +24,7 @@ const getCurrency = async (req, res) => {
   console.log("NO tengo almacenada esta currency", cachedData);
 
   try {
-    const { data } = await axios(`${apiUrl}USD`);
+    const { data } = await axios(`${apiUrl}${baseCurrency}`);
     if (data.result === "success") {
       // Format the date
       const fullDate = data.time_last_update_utc;

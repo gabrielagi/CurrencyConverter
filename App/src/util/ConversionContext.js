@@ -11,13 +11,17 @@ const DEFAULT_QUOTE_CURRENCY = "GBP";
 
 export const ConversionContextProvider = ({ children }) => {
   const [baseCurrency, _setBaseCurrency] = useState(DEFAULT_BASE_CURRENCY);
-  const [quoteCurrency, setQuoteCurrency] = useState(DEFAULT_QUOTE_CURRENCY);
+  const [quoteCurrency, _setQuoteCurrency] = useState(DEFAULT_QUOTE_CURRENCY);
   const [date, setDate] = useState("");
   const [rates, setRates] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
   const setBaseCurrency = (currency) => {
     _setBaseCurrency(currency);
+  };
+
+  const setQuoteCurrency = (currency) => {
+    _setQuoteCurrency(currency);
   };
 
   useEffect(() => {
