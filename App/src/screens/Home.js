@@ -135,7 +135,7 @@ export default ({ navigation }) => {
                 />
               </View>
               <Text style={styles.text}>
-                {`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of`}
+                {`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of ${date}`}
               </Text>
               <Button
                 text="Reverse Currencies"
