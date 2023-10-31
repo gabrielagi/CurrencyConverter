@@ -4,7 +4,6 @@ import {
   ScrollView,
   Linking,
   Alert,
-  StyleSheet,
   StatusBar,
 } from "react-native";
 import { Entypo } from "@expo/vector-icons";
