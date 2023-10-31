@@ -10,7 +10,6 @@ import {
   Pressable,
   ActivityIndicator,
 } from "react-native";
-import { format } from "date-fns";
 import { Entypo } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -136,9 +135,7 @@ export default ({ navigation }) => {
                 />
               </View>
               <Text style={styles.text}>
-                {`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of ${
-                  date && format(new Date(date), "MMM do, yyyy")
-                }`}
+                {`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of`}
               </Text>
               <Button
                 text="Reverse Currencies"
