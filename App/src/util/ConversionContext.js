@@ -54,7 +54,7 @@ export const ConversionContextProvider = ({ children }) => {
       .finally(() => {
         setIsLoading(false);
       });
-  }, [baseCurrency]); // Esta función se ejecutará solo cuando baseCurrency cambie
+  }, [baseCurrency]);
 
   const swapCurrencies = () => {
     setBaseCurrency(quoteCurrency);

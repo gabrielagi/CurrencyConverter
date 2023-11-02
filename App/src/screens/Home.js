@@ -13,6 +13,8 @@ import {
 import { Entypo } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import style from "styled-components/native";
+
 import colors from "../constants/colors";
 import { ConversionInput } from "../components/ConversionInput";
 import { Button } from "../components/Button";
