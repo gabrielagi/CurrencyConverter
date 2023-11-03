@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { Alert } from "react-native";
 import axios from "axios";
+import { BACKEND_URL } from "@env";
 
 // import { api } from "./api"; With a backend implemented we don't need a api in our front
 
@@ -42,9 +43,7 @@ export const ConversionContextProvider = ({ children }) => {
     //   });
 
     axios
-      .get(
-        `http://192.168.1.36:3001/currencyconvert?baseCurrency=${baseCurrency}`
-      )
+      .get(`${BACKEND_URL}/currencyconvert?baseCurrency=${baseCurrency}`)
       .then((response) => {
         const data = response.data;
         setDate(data.date);
