@@ -42,7 +42,9 @@ export const ConversionContextProvider = ({ children }) => {
     //   });
 
     axios
-      .get(`http://localhost:3001/currencyconvert?baseCurrency=${baseCurrency}`)
+      .get(
+        `http://192.168.1.36:3001/currencyconvert?baseCurrency=${baseCurrency}`
+      )
       .then((response) => {
         const data = response.data;
         setDate(data.date);

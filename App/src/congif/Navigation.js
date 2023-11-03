@@ -17,7 +17,7 @@ const AppNavigator = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 2800);
   }, []);
 
   if (isLoading) {
